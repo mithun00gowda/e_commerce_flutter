@@ -1,4 +1,5 @@
 import 'package:e_commerce/services/assets_manager.dart';
+import 'package:e_commerce/widgets/app_name_text.dart';
 import 'package:e_commerce/widgets/subtitle_text.dart';
 import 'package:e_commerce/widgets/title_text.dart';
 import 'package:flutter/material.dart';
@@ -17,10 +18,10 @@ class ProfileScreen extends StatelessWidget {
       appBar: AppBar(
 
         leading: Padding(
-            padding: EdgeInsets.all(8.0),
+            padding:const EdgeInsets.all(8.0),
 
             child: Image.asset(AssetsManager.shoppingCart)),
-        title: Text("Profile Screen"),),
+        title:const AppNameText(fontsize: 20,),),
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -64,9 +65,9 @@ class ProfileScreen extends StatelessWidget {
               padding: const EdgeInsets.all(14.0),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  SizedBox(height: 6,),
-                  Divider(
+                children: <Widget>[
+                  const SizedBox(height: 6,),
+                  const Divider(
                     height: 1,
                   ),
                   SizedBox(height: 6,),
@@ -76,13 +77,13 @@ class ProfileScreen extends StatelessWidget {
                   CustomListTile(imagePath: AssetsManager.wishlistSvg, text: "Wishlist", function: (){}),
                   CustomListTile(imagePath: AssetsManager.recent, text: "View recently", function: (){}),
                   CustomListTile(imagePath: AssetsManager.address, text: "Address", function: (){}),
-                  SizedBox(height: 6,),
-                  Divider(
+                  const SizedBox(height: 6,),
+                  const Divider(
                     height: 1,
                   ),
-                  SizedBox(height: 6,),
+                  const SizedBox(height: 6,),
                   TitleText(label: "Settings"),
-                  SizedBox(height: 10,),
+                  const SizedBox(height: 10,),
                   SwitchListTile(
                     secondary: Image.asset(AssetsManager.theme,height: 34,),
                       title: Text(themeProvider.getIsDarkTheme ? "Dark Mode" : "Light Mode"),
@@ -91,12 +92,12 @@ class ProfileScreen extends StatelessWidget {
                     print("the them bool ${themeProvider.getIsDarkTheme}");
                   }),
                   SizedBox(height: 6,),
-                  Divider(
+                  const Divider(
                     height: 1,
                   ),
-                  SizedBox(height: 6,),
+                  const SizedBox(height: 6,),
                   TitleText(label: "Others"),
-                  SizedBox(height: 10,),
+                  const SizedBox(height: 10,),
                   CustomListTile(imagePath: AssetsManager.warning, text: "Privarcy & Policy", function: (){})
                 ],
               ),
@@ -104,10 +105,10 @@ class ProfileScreen extends StatelessWidget {
             Center(
               child: ElevatedButton.icon(
                   style: ElevatedButton.styleFrom(
-                   padding: EdgeInsets.symmetric(horizontal: 20,vertical: 10),
+                   padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 10),
                     backgroundColor: Colors.redAccent
                   ),
-                  onPressed: (){},icon: Icon(Icons.login,color: Colors.white,), label: Text('Login',style: TextStyle(color: Colors.white),)),
+                  onPressed: (){},icon: const Icon(Icons.login,color: Colors.white,), label: const Text('Login',style: TextStyle(color: Colors.white),)),
             )
           ],
         ),
@@ -127,7 +128,7 @@ class CustomListTile extends StatelessWidget {
     },
       leading: Image.asset(imagePath,height: 34,),
       title: SubtitleText(label: text),
-      trailing: Icon(IconlyLight.arrowRight2),
+      trailing: const Icon(IconlyLight.arrowRight2),
     );
   }
 }

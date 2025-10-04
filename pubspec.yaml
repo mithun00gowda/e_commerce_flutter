@@ -13,6 +13,7 @@ dependencies:
   provider:
   cupertino_icons:
   flutter_iconly:
+  shimmer:
 
 dev_dependencies:
   flutter_test:
