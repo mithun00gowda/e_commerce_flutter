@@ -21,3 +21,12 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+
+  assets:
+    - assets/userAssets/images/
+    - assets/
+    - assets/userAssets/images/bag/
+    - assets/userAssets/images/profile/
+    - assets/userAssets/images/categories/
+    - assets/userAssets/images/banners/
+    - assets/userAssets/
