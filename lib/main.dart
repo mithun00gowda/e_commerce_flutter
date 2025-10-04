@@ -1,6 +1,6 @@
 import 'package:e_commerce/constants/theme_data.dart';
 import 'package:e_commerce/provider/theme_provider.dart';
-import 'package:e_commerce/screens/home_screen.dart';
+import 'package:e_commerce/root_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
@@ -30,7 +30,7 @@ class MainApp extends StatelessWidget {
         return MaterialApp(
         title: "E_Commerce",
         theme: Styles.themeData(isDarkTheme: themeProvider.getIsDarkTheme, context: context),
-        debugShowCheckedModeBanner: false, home: HomeScreen());
+        debugShowCheckedModeBanner: false, home:const RootScreen());
       },
     ),
     );

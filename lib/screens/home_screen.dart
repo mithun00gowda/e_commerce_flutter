@@ -1,6 +1,6 @@
-import 'dart:math';
 
 import 'package:e_commerce/provider/theme_provider.dart';
+import 'package:e_commerce/widgets/subtitle_text.dart';
 import 'package:e_commerce/widgets/title_text.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -17,7 +17,8 @@ class HomeScreen extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           //TODO ADD TEXT
-           TitleText(),
+           SubtitleText(label: "Hello World",),
+          TitleText(label: "Hello this is Title"),
           ElevatedButton(onPressed: () {}, child: const Text('Click Me')),
           SwitchListTile(
               title: Text(themeProvider.getIsDarkTheme ? "Dark Mode" : "Light Mode"),
