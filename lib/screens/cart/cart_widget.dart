@@ -1,3 +1,4 @@
+import 'package:e_commerce/screens/cart/quantity_btm_sheet.dart';
 import 'package:e_commerce/widgets/subtitle_text.dart';
 import 'package:e_commerce/widgets/title_text.dart';
 import 'package:fancy_shimmer_image/fancy_shimmer_image.dart';
@@ -70,13 +71,19 @@ class CartWidget extends StatelessWidget {
                             color: Colors.blue,
                           ),
                           OutlinedButton.icon(
-                              onPressed: () {},
-                              icon: Icon(IconlyLight.arrowDown2),
-                              label: Text('Qty'),
-                          style: OutlinedButton.styleFrom(
-                            side: BorderSide(width: 1),
-
-                          ),
+                            onPressed: () async {
+                              await showModalBottomSheet(
+                                backgroundColor: Theme.of(context).scaffoldBackgroundColor,
+                                  context: context,
+                                  builder: (context) {
+                                    return const QuantityBtmSheet();
+                                  });
+                            },
+                            icon: Icon(IconlyLight.arrowDown2),
+                            label: Text('Qty'),
+                            style: OutlinedButton.styleFrom(
+                              side: BorderSide(width: 1),
+                            ),
                           ),
                         ],
                       ),
