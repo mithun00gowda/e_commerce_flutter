@@ -23,6 +23,7 @@ class ProfileScreen extends StatelessWidget {
             child: Image.asset(AssetsManager.shoppingCart)),
         title:const AppNameText(fontsize: 20,),),
       body: SingleChildScrollView(
+        physics:const BouncingScrollPhysics(),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [

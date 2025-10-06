@@ -14,6 +14,7 @@ dependencies:
   cupertino_icons:
   flutter_iconly:
   shimmer:
+  fancy_shimmer_image:
 
 dev_dependencies:
   flutter_test:
