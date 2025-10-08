@@ -15,6 +15,7 @@ dependencies:
   flutter_iconly:
   shimmer:
   fancy_shimmer_image:
+  dynamic_height_grid_view:
 
 dev_dependencies:
   flutter_test:
