@@ -19,14 +19,14 @@ class ProductWidget extends StatelessWidget {
         },
         child: Column(
           children: [
-            ClipRRect(
-              borderRadius: BorderRadius.circular(12),
-              child: FancyShimmerImage(
-                imageUrl: AppConstants.imageUrl,
-                width: double.infinity,
-                height: size.height * 0.22,
+              ClipRRect(
+                borderRadius: BorderRadius.circular(12),
+                child: FancyShimmerImage(
+                  imageUrl: AppConstants.imageUrl,
+                  width: double.infinity,
+                  height: size.height * 0.22,
+                ),
               ),
-            ),
             const SizedBox(
               height: 10,
             ),
